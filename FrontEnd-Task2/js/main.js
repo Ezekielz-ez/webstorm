@@ -16,31 +16,51 @@ form.addEventListener("submit", x=>{
 
   if(firstName.value == ''){
     firstName.setAttribute('style','border: rgba(255, 0, 0, 0.2) solid 1px;');
-    firstName.focus();
     notifies[0].setAttribute('style','color:red');
+    if(pass){
+      firstName.focus();
+    }
     pass = false;
   }
 
-  if(lastName.value == ''){
+  if(lastName.value === ''){
     lastName.setAttribute('style','border: rgba(255, 0, 0, 0.2) solid 1px;');
+    notifies[1].setAttribute('style','color:red');
+    if(pass){
+      lastName.focus();
+    }
     pass = false;
-    firstName.focus();
   }
 
-  if(password.value == ''){
+  if(password.value === ''){
     password.setAttribute('style','border: rgba(255, 0, 0, 0.2) solid 1px;');
+    if(pass){
+      password.focus();
+    }
     pass = false;
-    firstName.focus();
+    notifies[2].setAttribute('style','color:red');
   }
 
-  if(email.value == ''){
+  if(email.value === ''){
     email.setAttribute('style','border: rgba(255, 0, 0, 0.2) solid 1px;');
+    if(pass){
+      email.focus();
+    }
     pass = false;
-    firstName.focus();
+    notifies[3].setAttribute('style','color:red');
   }else{
-
+    if(email.value[0]==='@' || email.value[email.value.length-1]==='@' || !RegExp('@').test(email.value) || RegExp(' ').test(email.value)){
+      if(pass){
+        email.focus();
+      }
+      pass = false;
+    }
   }
-  x.preventDefault()
+
+  if(!pass){
+    x.preventDefault()  ;
+  }
+
 });
 
 
