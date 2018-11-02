@@ -1,10 +1,9 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
 html {
+    color: #222;
     font-size: 1em;
     line-height: 1.4;
-    background-color: #222222;
-
 }
 
 ::-moz-selection {
@@ -35,12 +34,6 @@ video {
     vertical-align: middle;
 }
 
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
 textarea {
     resize: vertical;
 }
@@ -56,120 +49,158 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-.alert {
-    background-color: #c60f13;
-}
-
-header {
-    width: 100%;
-    height: 300px;
-    background: url(https://www.esports.com/upload/articles/1100/DarkestDungeon-Dota2-back.jpg) center;
-    background-size: cover;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-end;
-
-}
-
-header h1 {
-    font-size: 1.8em;
-    padding-left: 20px;
-    padding-right: 50px;
-    color: #e9e9e9;
-    margin: 10px 0 -20px 10px;
-    background-color: black;
-    z-index: 3;
-}
-
-header img{
-    margin: 10px 0 -20px 30px;
-    width: 150px;
-    z-index: 3;
-    background-color: white;
-}
-
-main{
-  margin-top: 40px;
-  margin-left: 10px;
-  width: 80%;
-}
-main ul{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 0 0 10px;
-  padding: 0;
-  list-style-type: none;
-}
-main figure{
-  width: 100%;
-  padding: 0;
-  margin: 10px auto;
-  position: relative;
-}
-main img{
-  z-index: -1;
-  object-fit: cover;
-  width: 100%;
-}
-
-main h3{
-  background: linear-gradient(to right, rgba(0,0,0,0) , rgba(0,0,0,1));
-  font-family: "Adobe Gothic Std B", serif;
-  color: wheat;
-  position: absolute;
-  width: calc(100% - 4px);
-  top: 0;
-  right: 0;
-  margin: 0;
-  padding: 4px 0 4px 8px;
-  text-align: right;
-}
-main li{
-  width: 40%;
-  margin: 20px 5% 10px 0;
-  padding: 0;
-}
-
-body{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-aside{
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  margin-right: 10px;
-  width: 20%;
-}
-
-aside figure{
+div, form, input{
   display: block;
-  width: calc(100% - 30px);
-  color: #999999;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  margin-left: 30px;
-  font-family: "Adobe Devanagari", gothic_modern, fantasy;
-  background-color: rgba(5,5,5,0.1);
-  padding: 0;
-}
-
-aside p{
-  width: calc(100% - 30px);
-  margin: -15px 0 0 30px;
-  color: wheat;
-  font-size: 2em;
-  background-color: black;
+  margin: 0;
   padding: 0;
 }
 
 body{
-  background: url("https://www.darkestdungeon.com/wp-content/uploads/2017/09/PAX-Wallpaper.jpg") center;
-  background-size: cover;
+  height: 100%;
+  background-size: 100%;
+  background: black url(../img/loading_screen.darkestdungeon_0.png) no-repeat center;
+}
+
+h1{
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+form{
+  width: 35%;
+  position: relative;
+  margin: 70px auto;
+  background-size: 50%;
+  background: rgba(0,0,0,0.4);
+  padding-bottom: 30px;
+}
+
+.fieldset{
+  padding-top: 15px;
+  border: 0;
+  position: relative;
+  margin: 32px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+form div{
+  margin: 5px auto;
+  width: 100%;
+}
+
+form label{
+  display: block;
+  /*background: linear-gradient(to right, rgba(0,0,0,0) , rgba(0,0,0,1));*/
+  padding: 5px 0;
+  margin: auto;
+  width: 80%;
+  color: white;
+  font-size: 1em;
+  opacity: 1;
+}
+
+form input{
+  color: wheat;
+  width: 80%;
+  height: 30px;
+  margin: auto;
+  /*background: linear-gradient(to right, rgba(0,0,0,0) , rgba(0,0,0,1));*/
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  border: rgba(255, 250, 250, 0.2) solid 1px;
+}
+
+form legend{
+  position: absolute;
+  top: -22px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  font-size: 1.6em;
+  color: wheat;
+}
+
+.corner-pic{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.fieldset-top{
+  position: absolute;
+  top: -35px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  filter: brightness(200%);
+}
+
+.fieldset-top-2nd{
+  position: absolute;
+  top: -30px;
+  width: 60%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 50px;
+  opacity: 0.8;
+  z-index: -3;
+}
+
+.button-container{
+  width: 90%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -58px;
+  z-index: 2;
+  opacity: 0.2;
+}
+
+.submit-button{
+  position: absolute;
+  z-index: 5;
+  width: 20%;
+  height: 100px;
+  bottom: -45px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  filter: grayscale(100%);
+  background-size: 150%;
+  background: url(../img/save_icon.png) no-repeat center;
+  border: none;
+  color: rgba(0,0,0,0);
+;
+}
+
+.submit-button:hover{
+  filter: brightness(110%);
+}
+
+
+
+/* ==========================================================================
+   Placeholder
+   ========================================================================== */
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 0.1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: black;
+  opacity: 0.1;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: black;
+  opacity: 0.1;
 }
 
 
@@ -181,55 +212,50 @@ body{
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-@media only screen and (min-width: 601px) {
-  aside{
-    margin-top: 80px;
-    width: 10%;
-    margin-right: 5%;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex-flow: column;
+@media only screen and (min-width: 60em) {
+  .corner-pic{
+    width: 100%;
+  }
+
+  .fieldset-top{
+    width: 15%;
   }
 }
-@media only screen and (max-width: 600px) {
-  body {
-    max-width: 60em;
-    margin: auto;
+@media only screen and (max-width: 35em) {
+  body{
+    background: url(../img/loading_screen.darkestdungeon_0.png) center;
+    background-size: 300%;
   }
 
-  main{
-    width: 100%;
-    order: 0;
+  form{
+    width: 80%;
+    margin: 60px auto;
   }
 
-  main li{
-    width: 90%;
-    margin-left: 10px;
+  .corner-pic{
+    opacity: 0;
   }
 
-  aside{
-    width: 100%;
-    order: 1;
-    flex-wrap: wrap;
+  .fieldset-top{
+    width: 20%;
   }
 
-  aside figure{
-    width: 72px;
-    margin: 5px 5px 5px 10px;
+  .submit-button{
+    bottom: -60px;
+  }
+}
+
+@media only screen and (max-width: 60em) and (min-width: 35em) {
+  form{
+    width: 60%;
   }
 
-  aside p{
-    margin: 5px 5px 5px 10px;
+  .corner-pic{
+    height: 100%;
   }
 
-  header{
-    flex-direction: row;
-    flex-flow: row;
-    align-items: flex-end;
-  }
-
-  header h1{
-    padding: 5px;
+  .fieldset-top{
+    width: 15%;
   }
 }
 
