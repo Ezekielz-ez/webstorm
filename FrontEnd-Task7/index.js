@@ -2,6 +2,7 @@
 require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql2');
+const db = require('./modules/database');
 
 const multer = require('multer');
 const upload = multer({dest: 'public/uploads/'});
@@ -16,16 +17,7 @@ const connection = mysql.createConnection({
   password: process.env.DB_PASS,
 });
 
-// simple query
-connection.query(
-    'SELECT * FROM table',
-    function(err, results, fields) {
-      console.log(results); // results contains rows returned by server
-      // console.log(fields); // fields contains extra meta data about results, if available
-      console.log(err);
-    },
-);
-
+console.log(db.select(connection));
 app.use(express.static('public'));
 
 app.post('/upload', upload.single('mediafile'), (req, res, next) => {
