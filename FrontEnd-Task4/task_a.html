@@ -13,16 +13,13 @@
     <link rel="stylesheet" href="css/main.css">
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js"></script>
 </head>
-
 <body>
-
-    <form>
-        <input>
-        <input>
-    </form>
-
-    <script src="js/main.js"></script>
+    <form method="post" action="http://10.114.32.134/node/upload" enctype="multipart/form-data">
+    <input type="file" accept="image/*" id="fileUpload" name="image">
+    <input type="submit">
+</form>
 </body>
 
 </html>

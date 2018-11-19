@@ -13,19 +13,26 @@
     <link rel="stylesheet" href="css/main.css">
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js"></script>
 </head>
 
 <body>
-
-    <form>
-        <input>
-        <input>
+    <form method="post" action="">
+        <input type="file" accept="image/*" id="fileUpload" name="image">
+        <input type="submit">
     </form>
-    <p id="message"></p>
-    <img>
-
-<script src="js/main_b.js"></script>
+    <script>
+      const form = document.querySelector('form');
+      form.addEventListener('submit',x=>{
+        x.preventDefault();
+        const data = document.querySelector('#fileUpload').files [0];
+        const formData = new FormData();
+        formData.append('image', data);
+        fetch('http://10.114.32.134/node/upload/',{
+          method: 'POST',
+          body: formData
+        }).then(res => {console.log(res);})
+      });
+    </script>
 </body>
 
 </html>
