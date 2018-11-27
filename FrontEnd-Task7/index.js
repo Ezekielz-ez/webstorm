@@ -17,7 +17,7 @@ app.post('/upload/', upload.single('mediafile'), (req, res, next) => {
 });
 
 app.get('/grabpic/', (req,res,next) =>{
-  db.select(connection, res);
+  db.select(connection, res, next);
 });
 
 app.use('/upload/', (req, res, next)=>{
